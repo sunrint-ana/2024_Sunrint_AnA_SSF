@@ -1,6 +1,8 @@
-html {
+html, body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .Bground {
@@ -10,13 +12,15 @@ html {
     padding: 0;
     margin: auto;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .include_tree {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 480px;
+    height: 1107px;
+    overflow-y: auto;
 }
 
 .T, .M, .B {
@@ -25,20 +29,6 @@ html {
     transform: translateX(-50%);
 }
 
-.T {
-    top: 52%;
-    z-index: 3;
-}
-
-.M {
-    top: 65%;
-    z-index: 2;
-}
-
-.B {
-    top: 72%;
-    z-index: 1;
-}
 
 #addLayerButton {
     position: absolute;
