@@ -19,13 +19,13 @@ document.getElementById('addLayerButton').addEventListener('click', function() {
     const firstMTop = parseFloat(window.getComputedStyle(firstMLayer).top);
 
     // 새로운 레이어의 위치를 첫 번째 중간트리 레이어 위로 설정
-    newLayer.style.top = `${firstMTop - 1}%`;
+    newLayer.style.top = `${firstMTop - 90}px`;
 
     // 새로운 레이어를 첫 번째 중간트리 레이어 앞에 추가
     treeContainer.insertBefore(newLayer, firstMLayer);
 
     // 위 트리 이미지 이동
     const latestM = treeContainer.querySelectorAll('.M')[0];
-    topTree.style.top = `${parseFloat(latestM.style.top) - 1}%`;
+    topTree.style.top = `${parseFloat(latestM.style.top) - 140}px`;
 
 });
