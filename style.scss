@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
 
     justify-content: center;
+    align-items: flex-end;
 
     padding: 0;
     margin: 0;
@@ -28,18 +29,17 @@ body {
 }
 
 #treeContainer {
+    position: relative;
     display: flex;
-    left: 50%;
 
     width: 60%;
     max-width: 40vh;
-    min-height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
 }
 
-#treeContainer .T {
+#treeContainer .T { 
     width: 80%;
     margin: -3.5% 0 !important;
 }
@@ -56,6 +56,15 @@ body {
 
 #treeContainer > #grow {
     z-index: 2;
+}
+
+#giftContainer {
+    position: absolute;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+    // margin-bottom: calc(170px * 50%);
 }
 
 #addLayerButton {
