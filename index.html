@@ -19,10 +19,30 @@
 
         <img class="B" src="img/B.png" style="z-index: 1">
 
-        <div id="giftContainer"></div>
+        <div id="giftContainer">
+            <!-- <img src="img/ball_D.png"/>
+            <img src="img/box_D.png"/>
+            <img src="img/cake_D.png"/>
+            <img src="img/gloves_D.png"/>
+            <img src="img/star_D.png"/>
+            <img src="img/ball_D.png"/>
+            <img src="img/box_D.png"/>
+            <img src="img/cake_D.png"/>
+            <img src="img/gloves_D.png"/> -->
+        </div>
     </div>
-    <button id="addLayerButton">+</button>
     
     <script src="script.js"></script>
+    <script>
+        const gift = document.getElementById("giftContainer");
+
+        function resize() {
+            gift.style.paddingTop = document.querySelector(".T").clientHeight*0.9+"px";
+            gift.style.paddingBottom = document.querySelector(".B").clientHeight/2.7+"px";
+        }
+
+        window.onresize = resize;
+        window.onload = resize;
+    </script>
 </body>
 </html>
