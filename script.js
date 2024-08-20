@@ -91,9 +91,10 @@ function load() {
             addGift(element.type, () => {
                 console.log(element.author);
                 if(!element.author) return;
+                document.querySelector('#giftViewer').getElementsByTagName('h2')[0].innerText = element.author + "님의 선물";
                 document.querySelector('#giftViewer').getElementsByTagName('textarea')[0].value = element.message ? element.message:"25일이 지나야지만 볼 수 있어요!";
                 console.log();
-                document.querySelector('#giftViewer').getElementsByTagName('p')[0].innerText = element.author+"이가 보냄";
+                document.querySelector('#giftViewer').getElementsByTagName('p')[0].innerText = element.author+"(이)가 보냄";
                 document.querySelector('#giftViewer').showModal();
             });
         });
@@ -107,7 +108,12 @@ document.querySelector('#loginfin').onclick = () => {
 }
 
 document.querySelector('#send').onclick = () => {
-    postItem(document.querySelector('#sname').value, document.querySelector('#smessage').value, Math.floor(Math.random()*5)).then(e => window.location.reload());
+    const author = document.querySelector('#sname').value;
+    const message = document.querySelector('#smessage').value;
+    const type = Math.floor(Math.random()*5);
+    if (author && message) {
+        postItem(author, message, type).then(e => window.location.reload());
+    }
     document.querySelector('#giftSender').close();
 }
 
