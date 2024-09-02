@@ -90,11 +90,11 @@ body {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    transform: translateY(10%);
+    transform: translateY(-30%);
 }
 
 #giftContainer > img:nth-child(3n+2) {
-    transform: translateY(25%);
+    transform: translateY(5%);
 }
 
 #addLayerButton {
@@ -172,6 +172,9 @@ button {
     border-radius: 1rem;
     background-color: darkred;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:before {
@@ -180,7 +183,7 @@ button:before {
     width: 100%;
     height: 100%;
     padding: .5rem;
-    transform: translate(-37.5%, -30%);
+    // transform: translate(-37.5%, -30%);
     background-color: darkred;
     z-index: -1;
     border-radius: 1rem;
@@ -240,6 +243,11 @@ input:focus {
     outline: none;
 }
 
+.infoBtn {
+    display: flex;
+    flex-direction: row;
+}
+
 #info {
     position: absolute;
     color: white;
@@ -251,6 +259,6 @@ input:focus {
     z-index: 10;
 }
 
-#info button:before {
-    transform: translate(-25%, -30%);
-}
+// #info button:before {
+//     transform: translate(-25%, -30%);
+// }

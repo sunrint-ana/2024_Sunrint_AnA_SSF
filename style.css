@@ -75,11 +75,11 @@ body {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
-  transform: translateY(10%);
+  transform: translateY(-30%);
 }
 
 #giftContainer > img:nth-child(3n+2) {
-  transform: translateY(25%);
+  transform: translateY(5%);
 }
 
 #addLayerButton {
@@ -99,7 +99,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: radial-gradient(3px 3px at 386px 77px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 487px 571px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 131px 385px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 128px 232px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 437px 436px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 306px 147px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 309px 122px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 13px 101px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 200px 486px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 132px 34px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 497px 294px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 572px 463px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 138px 420px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 212px 195px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 96px 91px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 414px 274px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 139px 396px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 561px 310px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 161px 113px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 106px 331px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 398px 173px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 398px 60px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 520px 574px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 335px 397px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 109px 523px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 157px 84px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 260px 377px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 230px 244px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 360px 542px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 321px 477px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0));
+  background-image: radial-gradient(4px 4px at 541px 16px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 507px 291px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 159px 537px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 405px 271px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 274px 409px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 569px 111px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 328px 455px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 398px 357px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 85px 91px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 94px 20px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 403px 561px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 282px 168px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 494px 43px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 567px 484px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 172px 251px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 320px 50px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 76px 361px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 362px 74px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 124px 463px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 440px 348px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 457px 353px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 518px 525px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 513px 506px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 63px 364px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(6px 6px at 143px 146px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 538px 595px, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 167px 425px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 74px 414px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 64px 265px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 354px 220px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0));
   background-size: 600px 600px;
   animation: snow 5s linear infinite;
   content: "";
@@ -146,6 +146,9 @@ button {
   border-radius: 1rem;
   background-color: darkred;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:before {
@@ -154,7 +157,6 @@ button:before {
   width: 100%;
   height: 100%;
   padding: 0.5rem;
-  transform: translate(-37.5%, -30%);
   background-color: darkred;
   z-index: -1;
   border-radius: 1rem;
@@ -214,6 +216,11 @@ input:focus {
   outline: none;
 }
 
+.infoBtn {
+  display: flex;
+  flex-direction: row;
+}
+
 #info {
   position: absolute;
   color: white;
@@ -223,10 +230,6 @@ input:focus {
 
 #info button {
   z-index: 10;
-}
-
-#info button:before {
-  transform: translate(-25%, -30%);
 }
 
 /*# sourceMappingURL=style.css.map */
