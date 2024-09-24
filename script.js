@@ -1,31 +1,127 @@
-// Snowfall effect
-const bground = document.querySelector(".Bground");
+const endpoint = 'http://localhost:8080';
 
-for (let i = 0; i < 200; i++) {
-    bground.insertAdjacentHTML("afterbegin", '<div class="snow"></div>');
-}
+const body = document.getElementsByTagName('body')[0];
+const grow = document.getElementById('grow');
+const giftContainer = document.getElementById('giftContainer');
 
-document.getElementById('addLayerButton').addEventListener('click', function() {
-    // 새로운 중간트리 생성
+let pass;
+let items;
+
+// 새로운 중간트리 생성
+function createNewTree() {
     const newLayer = document.createElement('img');
     newLayer.src = 'img/M.png';
     newLayer.className = 'M';
-    const treeContainer = document.getElementById('treeContainer');
-    const topTree = document.getElementById('topTree');
+    
+    grow.appendChild(newLayer);
 
-    // 기존 중간트리 레이어의 위치 가져옴
-    const allMLayers = treeContainer.querySelectorAll('.M');
-    const firstMLayer = allMLayers[0]; // 첫 번째 M 레이어
-    const firstMTop = parseFloat(window.getComputedStyle(firstMLayer).top);
+    const scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
 
-    // 새로운 레이어의 위치를 첫 번째 중간트리 레이어 위로 설정
-    newLayer.style.top = `${firstMTop - 1}%`;
+    console.log(scrollPos+newLayer.height);
+    window.scrollTo(0, scrollPos+newLayer.height);
+}
 
-    // 새로운 레이어를 첫 번째 중간트리 레이어 앞에 추가
-    treeContainer.insertBefore(newLayer, firstMLayer);
+function addGift(type, clickEvent) {
+    const gift = document.createElement('img');
+    gift.src = "img/"+mapImage(type);
+    gift.onclick = clickEvent;
+    giftContainer.appendChild(gift);
+    if(giftContainer.childElementCount > 3 && giftContainer.childElementCount%3==0) createNewTree();
+}
 
-    // 위 트리 이미지 이동
-    const latestM = treeContainer.querySelectorAll('.M')[0];
-    topTree.style.top = `${parseFloat(latestM.style.top) - 1}%`;
+function clearGift() {
+    giftContainer.innerHTML = '';
+    grow.innerHTML = '';
+}
 
+function mapImage(type) {
+    switch (type) {
+        case 0: return "ball_D.png";
+        case 1: return "box_D.png";
+        case 2: return "cake_D.png";
+        case 3: return "gloves_D.png";
+        case 4: return "star_D.png";
+        default: return null;
+    }
+}
+
+async function loadInformation() {
+    return await ((await fetch(endpoint+'/info')).json());
+}
+
+async function loadItems() {
+    return await (((await fetch(
+        endpoint+'/items',
+        {
+            method: 'POST',
+            body: JSON.stringify(
+                {
+                    "pass": document.querySelector('#pass').value
+                }
+            ),
+            mode: 'cors'
+        }
+    )).json()));
+}
+
+async function postItem(author, message, type) {
+    return await ((await fetch(
+        endpoint+'/item',
+        {
+            method: 'POST',
+            body: JSON.stringify(
+                {
+                    "author": author,
+                    "message": message,
+                    "type": type
+                }
+            )
+        }
+    )))
+}
+
+loadInformation().then(e => {
+    document.querySelector('#name').innerText = e.name+"님의 트리";
 });
+
+function load() {
+    loadItems().then(e => {
+        items = e.items;
+        items.forEach(element => {
+            addGift(element.type, () => {
+                console.log(element.author);
+                if(!element.author) return;
+                document.querySelector('#giftViewer').getElementsByTagName('h2')[0].innerText = element.author + "님의 선물";
+                document.querySelector('#giftViewer').getElementsByTagName('textarea')[0].value = element.message ? element.message:"25일이 지나야지만 볼 수 있어요!";
+                console.log();
+                document.querySelector('#giftViewer').getElementsByTagName('p')[0].innerText = element.author+"(이)가 보냄";
+                document.querySelector('#giftViewer').showModal();
+            });
+        });
+    });
+}
+
+document.querySelector('#loginfin').onclick = () => {
+    clearGift();
+    load();
+    document.querySelector('#loginfin').parentNode.close();
+}
+
+document.querySelector('#send').onclick = () => {
+    const author = document.querySelector('#sname').value;
+    const message = document.querySelector('#smessage').value;
+    const type = Math.floor(Math.random()*5);
+    if (author && message) {
+        postItem(author, message, type).then(e => window.location.reload());
+    }
+    document.querySelector('#giftSender').close();
+}
+
+load();
+// function test() {
+//     for(let i =0; i<50; i++) {
+//         addGift(Math.floor(Math.random()*5))
+//     }
+// }
+
+// test()
